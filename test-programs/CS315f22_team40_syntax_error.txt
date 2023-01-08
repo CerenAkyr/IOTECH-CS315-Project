@@ -1,0 +1,22 @@
+!#This program checks the air pressure and air quality every 30 seconds for 5 minutes
+and send the value to a URL. #!
+int minToSecs = 5 * 60;
+connection $conTwo( "https://www.cs.bilkent.edu.tr/~guvenir/courses/CS315/Pr1.htm" );
+int currentTime = ReadTimeStamp();
+int finTime = currentTime + minToSecs; 
+	int nextStep currentTime + 30; #accidentally forgot to type "="
+	while ( currentTime <= finTime )
+	{
+		currentTime = ReadTimeStamp();
+		timeDifference = currentTime - nextStep;
+		if ( timeDifference >= 30 and timeDifference < finTime )
+		{
+			int airPres = ReadAirPress();
+			int airQuality = ReadAirQual();
+			$conTwo.sen( airPres ); # syntax error on "send"
+			$conTwo.send( airQuality );
+			$conTwo.send( currentTime );
+			nextStep = currentTime1 + 30; #typo in identifier
+		}
+	}
+

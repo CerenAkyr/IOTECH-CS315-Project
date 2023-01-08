@@ -1,0 +1,54 @@
+int lightLevel = ReadLight();
+float funcLightRes;
+funcLightRes = calculateBrightness(); 
+bool isLess = checkCriteria( 3.0, funcLightRes ); # check if brightness level is larger
+
+lightLevel = 0;
+
+if ( true ) {
+	SetSwitch( true, 4 );
+}
+else 
+{
+	SetSwitch( false, 4 );
+}
+
+int soundLev = checkSoundLevel( 100 );
+float soundResult = calculateSoundLevel( soundLev );
+isLess = checkCriteria( 6, soundResult );
+if ( isLess )
+{
+	SetSwitch( true, 9 );
+}
+else {
+SetSwitch( false, 9 ); # close switch 9
+}
+
+func float calculateBrightness( int LevelOfLight ) {
+	int modOfLight;
+	modOfLight = LevelOfLight % 10;
+	return 3 + LevelOfLight / ( modOfLight + 1 );
+}
+func float calculateSoundLevel( int LevelOfSound )
+{
+	float result;
+	result = LevelOfSound / 5.0;
+return result;
+}
+
+func bool checkCriteria( float criteria, float comparedVal )
+{
+	bool isTrue = true;
+	if ( comparedVal <= criteria )
+	{
+		isTrue = true;
+	}
+	else if ( a > b )
+	{
+		int y = 13;
+	}
+	else {
+		isTrue = false;
+	}
+	return isTrue;
+}

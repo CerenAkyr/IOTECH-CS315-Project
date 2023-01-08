@@ -1,0 +1,36 @@
+#error in function declaration
+func int data2Fetch ( int valueFive, int value) {
+	return ReadTemperature();
+} 
+
+int i = 0;
+string temp = "temp string";
+for (int a = 0; a < 10 ; a = a + 1 ) {
+	a = a + 5;
+	int value = ReadAirQual();
+	int x 123 ; # error
+}
+
+!# multi
+line
+comment
+program also includes comment lines in line number count#!
+
+const string contantValue = "constant value";
+float = 3.5; #errror
+
+bool flag = true;
+bool flagTwo = false;
+
+if ( false or flag and not flagTwo){
+	string s = "inside if stmt";
+} else {
+	SetSwitch( true, 9 );
+	SetSwitch( false, 12 ); # false syntax since SetSwitch takes digits instead of ints
+} 
+
+int value 2 = 21;
+int valueThree = ReadAirQual); #forgot opening brace
+
+valueThree = valueTwo + a;
+
